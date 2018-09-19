@@ -10,7 +10,7 @@ body {
     flex-direction: column;
 }
 
-#resetBtn {
+#resetBtnRow {
 	padding-bottom: 5px;
 }
 #content {
