@@ -4,10 +4,16 @@ const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+const removeStud = (id) => {
+    list.splice(id, 1);
+    buildList();
+}
+
 const buildList = () => {
     $("#studentList").empty();
     list.forEach((elem, id) => {
-        let newNameElem = $("<span class='studentListItm'><button class='remStud btn btn-danger' data-id='" + id + "'>x</button> " + elem + "</span>");
+        let newNameElem = $("<span class='studentListItm'><button class='remStud btn btn-danger' onclick='removeStud(" + id + ")'>x</button> " + elem + "</span>");
+        console.log($(newNameElem));
         $("#studentList").append(newNameElem)
     })
 }
@@ -25,8 +31,7 @@ window.onload = () => {
         $("#studentName").text(picked);
     })
 
-    $(".remStud").on("click", () => {
-        list.splice($(this).attr("data-id"), 1);
-        buildList();
-    })
+    // $(".remStud").on("click", () => {
+    //     removeStud($(this).attr("data-id"));
+    // })
 }
