@@ -1,0 +1,21 @@
+body {
+	background-image: url("../images/background.png");
+}
+#studentSelector {
+    text-align: center;
+}
+
+#studentList {
+    display: flex;
+    flex-direction: column;
+}
+
+#resetBtn {
+	padding-bottom: 5px;
+}
+#content {
+	padding-top: 10px;
+}
+.studentListItm {
+    border: 2px solid black;
+}
