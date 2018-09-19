@@ -13,7 +13,6 @@ const buildList = () => {
     $("#studentList").empty();
     list.forEach((elem, id) => {
         let newNameElem = $("<span class='studentListItm'><button class='remStud btn btn-danger' onclick='removeStud(" + id + ")'>x</button> " + elem + "</span>");
-        console.log($(newNameElem));
         $("#studentList").append(newNameElem)
     })
 }
