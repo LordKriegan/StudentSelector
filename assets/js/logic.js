@@ -30,6 +30,12 @@ window.onload = () => {
         $("#studentName").text(picked);
     })
 
+    $("#addStud").on("click", () => {
+        const newName = prompt("Student Name: ");
+        list.push(newName);
+        list.sort();
+        buildList();
+    })
     // $(".remStud").on("click", () => {
     //     removeStud($(this).attr("data-id"));
     // })
